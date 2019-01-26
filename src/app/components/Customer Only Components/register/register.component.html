@@ -1,0 +1,96 @@
+<form #registerData="ngForm">
+
+    <!-- <input #userTypeData="ngModel" type="radio" name="userType" value="Customer"  [(ngModel)]="user.userType"> Customer 
+    <input  #userTypeData="ngModel" type="radio" name="userType" value="Company"  [(ngModel)]="user.userType"> Company 
+    <input #userTypeData="ngModel" required type="radio" name="userType" [(ngModel)]="user.userType" >  
+    <span *ngIf="userTypeData.invalid && userTypeData.touched">Please choose a type...</span> 
+    <br>
+    <br> -->
+
+    <b> Please Enter A UserName: </b>
+    <input #usernameData="ngModel" required minlength="2" maxlength="50" type="text" placeholder="UserName" 
+        name="customerName" [(ngModel)]="customer.customerName">
+    <span *ngIf="usernameData.errors?.required && usernameData.touched">Missing username...</span>
+    <span *ngIf="usernameData.errors?.minlength && usernameData.touched">Username too short...</span>
+    <br>
+    <br>
+
+    <b> Please Enter a Password:</b>
+    <input #passwordData="ngModel" required pattern="^(?=[A-Za-z0-9]*[a-z])(?=[A-Za-z0-9]*[A-Z])(?=[A-Za-z0-9]*\d)[A-Za-z0-9]{8,10}$" type="password" placeholder="Password" name="customerPassword" minlength="8" maxlength="10"
+        [(ngModel)]="customer.customerPassword">
+    <!-- <span *ngIf="passwordData.invalid && passwordData.touched">Incorrect password...</span> -->
+    <span *ngIf="passwordData.errors?.pattern && passwordData.touched"> Password Must Be Between 8-10 Character, and contain at least 1 upper case letter, 1 lower case letter and 1 digit</span>
+    <br>
+    <br>
+
+    <b> Please Repeat Your Password:</b>
+    <input #passwordData2="ngModel"  required type="password" placeholder="Password" name="customerPassword2" minlength="8" maxlength="10" [ngModel]="whatever">
+    <!-- <span *ngIf="passwordData2.invalid && passwordData2.touched">Incorrect password...</span> -->
+    <!-- <span *ngIf="passwordData2.errors?.minlength || passwordData2.errors?.maxlength && usernameData.touched"> Password Must Be Between 8-10 Characters</span>  -->
+    <span *ngIf="passwordData2.value!== passwordData.value && passwordData2.touched"> Passwords do not match! </span>
+    <br>
+    <br>
+<br>
+    <button *ngIf="passwordData2.value==passwordData.value && !usernameData.invalid && !passwordData.invalid" [disabled]="registerData.form.invalid" (click)="register()"> Register </button>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- mega menu syntax
+  
+  <div class="register">
+    <a href="#home">Home</a>
+    <a href="#news">News</a>
+    <div class="dropdown">
+      <button class="dropbtn">Dropdown 
+        <i class="fa fa-angle-double-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <div class="header">
+          <h2>Mega Menu</h2>
+        </div> 
+        <div class="row">
+          <div class="column">
+            <h3>Category 1</h3>
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+          <div class="column">
+            <h3>Category 2</h3>
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+          <div class="column">
+            <h3>Category 3</h3>
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div> -->

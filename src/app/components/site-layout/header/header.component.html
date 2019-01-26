@@ -1,0 +1,38 @@
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="head">
+  
+    <div class ="logo">
+      Couper
+      </div>
+      <p class ="headerMenu">
+    
+        <a  class="one" routerLink="home">Home </a>
+        <a  *ngIf="!isLoggedIn()" routerLink="login">Login </a>
+        <a  *ngIf="!isLoggedIn()" routerLink="register">  Register </a>
+       <a  *ngIf="isCustLoggedIn()" routerLink="customerProfile"> Profile </a>
+        <a  *ngIf="isCompanyLoggedIn()" routerLink="companyProfile"> Profile </a>
+           <button class="logOut" *ngIf="isLoggedIn()" (click)="logOut()"> Log Out </button>
+       
+      </p>
+    </div>
+    -->
+
+
+
+    <div class="head">
+  
+        <div class ="logo">
+          Couper
+          <p class ="headerMenu">
+          <!-- <div class="headerMenu"> -->
+            <a  class="one" routerLink="home"> Home </a>
+            <a  *ngIf="!isLoggedIn()" routerLink="login"> Login </a>
+            <a  *ngIf="!isLoggedIn()" routerLink="register"> Register </a>
+            <a  *ngIf="isCustLoggedIn()" routerLink="customerProfile"> Profile </a>
+            <a  *ngIf="isCompanyLoggedIn()" routerLink="companyProfile"> Profile </a>
+            <button class="logOut" *ngIf="isLoggedIn()" (click)="logOut()"> Log Out </button>
+        <!-- </div> -->
+    </p>
+        </div>
+
+        

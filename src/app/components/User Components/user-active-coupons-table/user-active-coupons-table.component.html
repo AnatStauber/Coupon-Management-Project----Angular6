@@ -1,0 +1,26 @@
+<!-- <div class="gallery">
+    <div class="couponGallery"  *ngFor="let coupon of compantActiveCoupons">
+      <img src="{{ coupon.couponImage }}">
+      <div class="inner">
+      <button (click)="goToProfile()" class="title"> {{ coupon.couponTitle }} </button>
+      <h1 class="price"> {{ coupon.couponPrice | currency: 'ILS':true }}  </h1>
+    </div>
+    </div>
+  </div> -->
+  <button class="goBack" (click)="goToUserProfile()" > Go Back To Profile </button>
+  
+  <h1> Your Active coupons </h1>
+
+
+  <div class="gallery">
+        <div class="couponGallery"  *ngFor="let c of activeCoupons">
+          <img src="{{ c.couponImage }}">
+          <div class="inner">
+          <button (click)="goToCouponProfile(c.couponId)" id="title"> {{ c.couponTitle }} </button>
+          <h1 id="price"> {{ c.couponPrice | currency: 'ILS':true }}  </h1>
+        </div>
+        </div>
+      </div>
+      
+
+  

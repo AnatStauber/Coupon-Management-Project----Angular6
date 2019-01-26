@@ -1,0 +1,20 @@
+h1{
+    font-family: 'shink';
+    color: rgb(153,0,51);
+    font-size: 90px;
+    text-align: left;
+}
+
+h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: gray;
+    font-size: 40px;
+    text-align: left;
+}
+
+iframe{
+    /* position: relative; */
+    float:right;
+    margin-right: 30px;
+
+}

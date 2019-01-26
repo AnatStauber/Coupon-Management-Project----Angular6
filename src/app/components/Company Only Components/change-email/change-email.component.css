@@ -1,0 +1,41 @@
+
+span{
+    color: red;
+    font-family: 'abel';
+    font-weight: bold;
+    /* text-align: left; */
+    margin-left: 10px;
+    position: relative;
+    
+}
+
+form, input{
+    font-family: 'abel';
+    font-weight: bold;
+    font-size:20px;
+    text-align: center;
+    position:static;
+    
+}
+
+form{
+   position:fixed;
+   align-items: center;
+}
+
+b{
+    /* display:inline-block; */
+    /* float: left; */
+    padding: 20px;
+    position: relative;
+    text-align: right;
+    
+}
+
+input{
+    width:300px;
+}
+
+a{
+    
+}

@@ -1,0 +1,77 @@
+
+
+h1 {
+    color: black;
+    text-align: right;
+    margin-top: 0px;
+    margin-right: 15px;
+    vertical-align:top;
+}
+
+.logo{
+    margin-right: 55px;
+    /* height: 200px; */
+     background-image: url("/assets/images/couper-logo purple.png");
+     background-position:  right left;
+    background-repeat: no-repeat;
+    background-size: 190px;
+    vertical-align:middle;
+    text-indent: 180px;
+    color: rgb(153,0,51);
+    line-height: 220px;
+    font-size: 120px;
+    font-family: 'Shink';
+    text-align: left;
+    letter-spacing:-8px;
+    }
+
+    a{
+        font-family: 'abel';
+        padding:20px;
+        font-size: 20px;
+        font-weight: bold;
+        color:  rgb(153,0,51);
+        text-align: center;
+        vertical-align: middle;
+        position: relative;
+        display: inline;
+        letter-spacing: normal;
+        text-decoration: none;
+       
+
+    }
+
+    .headerMenu{
+        padding-left: 30px;
+        display: inline;
+     
+        color:white;
+    }
+
+    .one{
+        margin-left: 900px;
+        display: inline;
+        position: relative;
+    }
+     .headerMenu a:hover {
+    background-color: rgb(153,0,51);
+    color:white;
+  }
+
+  
+  .logOut{
+    font-family: 'abel';
+     padding:20px; 
+     font-size: 20px; 
+    font-weight: bold;
+    color:  rgb(153,0,51);
+    text-align: center;
+    vertical-align: middle;
+    background-color: white;
+    border: 0px; 
+   }
+
+  .logOut:hover {
+    background-color: rgb(153,0,51);
+    color:white;
+  }

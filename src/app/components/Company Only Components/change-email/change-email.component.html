@@ -1,0 +1,20 @@
+
+
+
+<form #changeEmailData="ngForm">
+
+    <b> Please Enter a New Email:</b>
+    <input #emailData="ngModel" required pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})(\.[a-zA-z]{2,5})*$" type="email" placeholder="new Email" name="companyEmail" 
+        [(ngModel)]="company.companyEmail">
+    <!-- <span *ngIf="passwordData.invalid && passwordData.touched">Incorrect password...</span> -->
+    <span *ngIf="emailData.errors?.required && emailData.dirty"> Missing Email Address </span>
+    <span *ngIf="emailData.errors?.pattern && emailData.dirty">  Email Address Invalid - Must Follow Pattern 'email@email.cc' </span>
+    <br>
+    <br>
+
+    <button [disabled]="changeEmailData.form.invalid" (click)="changeEmail()"> Update Email </button>
+    <br><br><br>
+    <a class="goBack" routerLink = "/companyProfile"> Back to profile > </a>   
+</form>
+
+

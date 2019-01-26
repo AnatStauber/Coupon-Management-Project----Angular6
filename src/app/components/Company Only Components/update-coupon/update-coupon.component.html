@@ -1,0 +1,60 @@
+<a class="goBack" routerLink = "/couponProfile/{{coupon.couponId}}"> Back to coupon> </a>   
+
+<h1>Update Coupon:</h1>
+
+<form #formData="ngForm">
+
+  Insert Coupon Title:  
+    <input #couponTitleData="ngModel"  minlength="2" maxlength="45" type="text" name="couponTitle" [(ngModel)] ="coupon.couponTitle" placeholder="Coupon Title" >
+    <span *ngIf="couponTitleData.errors?.required && couponTitleData.touched">Missing Title...</span>
+    <span *ngIf="couponTitleData.errors?.minlength && couponTitleData.touched">Title too short...</span>
+    <!-- <span *ngIf="couponTitleData.invalid && couponTitleData.touched"> Missing Title</span>
+    <span *ngIf="couponTitleData.errors?.minlength && couponTitleData.touched">Title too short...</span> -->
+
+  <br><br>
+  Select Coupon Type:  
+  <!-- <input #typeData="ngModel" required type="text" name="type" [(ngModel)] = "coupon.type" placeholder="Coupon Type" >
+  <span *ngIf="typeData.invalid && typeData.dirty"> Missing Coupon Type</span>
+  <br><br> -->
+  <!-- <div class="custom-select" style="width:150px;"> -->
+    <select #typeData="ngModel" name="type"  [(ngModel)] = "coupon.type" placeholder="Coupon Type" >
+      <option *ngFor="let t of couponTypes" value="{{t}}"> {{t}} </option>
+    </select>
+    <br><br>
+  <!-- </div> -->
+      
+  Insert Coupon Amount:  
+  <input #amount="ngModel"  type="number" pattern="^[1-9]+\d*$"  name="couponAmount" [(ngModel)] = "coupon.couponAmount" placeholder="amount" >
+  <!-- <span *ngIf="amount.errors?.required && amount.dirty"> Missing Amount</span> -->
+  <!-- <span *ngIf="amount.value==0 && amount.touched"> Amount Is Too Low</span> -->
+  <span *ngIf="amount.errors?.pattern && amount.touched"> Whole Numbers Only, Must Be 1 Or More</span>
+  <br><br>
+
+  Insert Coupon Price:  
+  <input #price="ngModel"  type="text" pattern="^[1-9]+[0-9]*(\.\d{2,}){1}$"  name="couponPrice" [(ngModel)] = "coupon.couponPrice" placeholder="price" >
+  <!-- <span *ngIf="price.errors?.required && price.dirty"> Missing Coupon price </span> -->
+  <span *ngIf="price.errors?.pattern && price.dirty"> Price Must Be 1 Or Above, And Must Follow the Pattern '0.00'</span>
+  <br><br>
+
+  Insert Coupon Message:  
+  <input #message="ngModel"  minlength="2" maxlength="200" type="text" name="couponMessage" [(ngModel)] = "coupon.couponMessage" placeholder="Message" >
+  <!-- <span *ngIf="message.errors?.required && message.dirty"> Missing Coupon message</span> -->
+  <span *ngIf="message.errors?.minlength && message.touched">Message too short...</span>
+  <br><br>
+
+
+  Insert Coupon End Date:  
+  <input #couponEndDate="ngModel"  type="date" name="couponEndDate" [(ngModel)] = "coupon.couponEndDate" placeholder="End Date" >
+  <!-- <span *ngIf="couponEndDate.invalid && couponEndDate.dirty"> Missing Coupon End Date</span> -->
+  <br><br>
+
+  Insert Coupon Image :  
+  <input #image="ngModel" type="text" name="couponImage" [(ngModel)] = "coupon.couponImage" placeholder="Coupon image" >
+  <!-- <span *ngIf="image.invalid && image.dirty"> Missing Coupon image</span> -->
+  <br><br>
+
+
+  <button [disabled]="!formData.form.touched" (click)="updateCoupon()">Update Coupon</button>
+
+</form>
+<!-- [disabled]="formData.form.invalid" -->

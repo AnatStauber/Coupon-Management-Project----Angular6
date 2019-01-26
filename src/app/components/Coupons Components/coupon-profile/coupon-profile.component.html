@@ -1,0 +1,25 @@
+
+
+<a class="goBack" routerLink = "/home"> Go back home> </a>  
+
+<div *ngIf="coupon">
+<h1> {{coupon.couponTitle}} </h1>
+<br>
+<img src="{{coupon.couponImage}}">
+<br>
+<p> {{coupon.couponMessage}}</p>
+<br>
+<h3> {{coupon.couponPrice | currency: 'ILS':true}} </h3>
+<br><br>
+<h3 *ngIf="companyName"> This coupon is offered to you by : {{companyName}} </h3>
+<br>
+<h3 > Coupon will be expired at: {{coupon.couponEndDate}} </h3>
+<br>
+<h3> There are only {{coupon.couponAmount}} units left of this coupons, so hurry! </h3>
+<br><br><br><br>
+<button *ngIf="!isCompany()" id="purchase" (click)="goToPurchase()"> purchase </button>
+<a *ngIf="isCompany()" routerLink="/updateCoupon/{{coupon.couponId}}"> Update Coupon </a>
+<br>
+<button *ngIf="isCompany()" (click)="confirmDelete()"> Delete Coupon </button>
+</div>
+<h2 *ngIf="!coupon"> Sorry, this coupon is no longer active. </h2>

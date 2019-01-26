@@ -1,0 +1,111 @@
+/* img{
+    height: 350px;
+    width:500px;
+    padding: 0;
+ }
+ 
+ .title{
+     text-align:center;
+     vertical-align: bottom;
+     display: inline; 
+     float: left;
+    background-color: rgb(153,0,51);
+     color:white;
+     padding:5px;
+ }
+ 
+ .price{
+     text-align:center;
+     font-weight: bold;
+     color: white;
+     width: 100px;
+     float:right;
+     background-color: rgb(153,0,51);
+     vertical-align: bottom;
+ }
+ .gallery{
+     padding: 60px;
+     margin:30px;
+     position:relative;
+   
+ } */
+ /* .couponGallery{
+     padding: 20px; 
+     border:1px dotted black;
+     float: right;
+     width:500px;
+     height: 400px;
+     margin: 20px;
+     position: sticky;
+     
+     } */
+ 
+ 
+  
+
+  img{
+    height: 350px;
+    width:500px;
+    padding: 0;
+ }
+ 
+ .gallery{
+     padding: 60px;
+     width:1500px;
+     position: relative;
+     top: 50%;
+      left: 30%;
+      margin-right: -50%; 
+     transform: translate(-50%, -50%) ;
+ }
+ .couponGallery{
+     border:1px dotted black;
+     float: right;
+     width:500px;
+     height: 450px;
+     margin: 20px;
+     position: sticky;
+     background-color: rgb(224, 222, 222);
+     }
+ 
+     .inner{
+     padding-block-start: 10%; 
+     height: 150px;
+ }
+     
+ #title{
+     text-align:left;
+     vertical-align: bottom;
+     float: left;
+     border: none;
+     color: rgb(153,0,51);
+     font-size: 30px;
+     font-family: 'abel';
+     width:330px;
+     font-weight: bold;
+     text-decoration: underline;
+     background-color:   rgb(224, 222, 222);
+     margin: 0px;
+    
+     position: absolute;
+         top: 90%;
+          margin-right: -50%; 
+         transform: translate(-70%, -50%) ;
+ }
+ 
+ #price{
+     text-align:center;
+     font-weight: bolder;
+     color:rgb(153,0,51);
+     width: 100px;
+     float:right;
+     margin-right:20px;
+     font-size: 30px;
+    
+     position: absolute;
+     top: 85%;
+     left: 85%;
+     transform: translate(-50%, -50%) ;
+    
+ }
+ 

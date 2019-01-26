@@ -1,0 +1,20 @@
+<button class="goBack" (click)="goToProfile()" > Go Back To Profile </button>
+  
+<h1> All Your coupons </h1>
+
+
+<div class="gallery">
+  <div class="couponGallery"  *ngFor="let coupon of allCoupons">
+      <img src="{{coupon.couponImage}}">
+      <div class="inner">
+           <a *ngIf="isActive(coupon)" id="title" routerLink="/couponProfile/{{coupon.couponId}}"> {{coupon.couponTitle}}</a> 
+           <a *ngIf="!isActive(coupon)" id="title" routerLink="/couponProfile/{{coupon.couponId}}" [queryParams]="{ couponStatus: 'nonActive'}">{{coupon.couponTitle}}</a> 
+           <!-- <h2 *ngIf="!isActive(coupon)" class="title"> {{coupon.couponTitle}} </h2> -->
+          <h2 id="price">{{coupon.couponPrice | currency: 'ILS':true}}</h2>
+          <h2 *ngIf="isActive(coupon)" id="title"> Coupon Status: {{coupon.couponStatus}}   </h2>
+          <h2 *ngIf="!isActive(coupon)"id="title"> Coupon Status: <b id="status">{{coupon.couponStatus}} </b>  </h2>
+         
+      </div>
+  </div>
+</div>
+

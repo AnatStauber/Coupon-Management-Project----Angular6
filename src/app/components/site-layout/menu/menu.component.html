@@ -1,0 +1,28 @@
+<!-- <a routerLink="home"> Home </a>
+
+<a routerLink="login"> Login </a>
+
+<a routerLink="register"> Register </a> -->
+<a [routerLink]="['/byFilters']" [queryParams]="{ type: 'ELECTRICITY'}"> Electricity </a>   
+<!--
+    
+<a [routerLink]="['/byFilters']" [queryParams]="{ type: 'FOOD', endDate: {{endDate}}, minPrice: {{minPrice}}, maxPrice: {{maxPrice}}}" > Food </a>
+<a [routerLink]="['/byFilters']" [queryParams]="{ type: 'HEALTH', endDate: {{endDate}}, minPrice: {{minPrice}}, maxPrice: {{maxPrice}}}" > Health </a>
+<a [routerLink]="['/byFilters']" [queryParams]="{ type: 'SPORTS', endDate: {{endDate}}, minPrice: {{minPrice}}, maxPrice: {{maxPrice}}}"> Sports </a>
+<a [routerLink]="['/byFilters']" [queryParams]="{ type: 'CHILDREN', endDate: {{endDate}}, minPrice: {{minPrice}}, maxPrice: {{maxPrice}}}"> Children </a>
+<a [routerLink]="['/byFilters']" [queryParams]="{ type: 'BABY', endDate: {{endDate}}, minPrice: {{minPrice}}, maxPrice: {{maxPrice}}}" > Baby </a>
+<a [routerLink]="['/byFilters']" [queryParams]="{ type: 'HOME', endDate: {{endDate}}, minPrice: {{minPrice}}, maxPrice: {{maxPrice}}}"> House & Home </a>
+<a [routerLink]="['/byFilters']" [queryParams]="{ type: 'FASHION', endDate: {{endDate}}, minPrice: {{minPrice}}, maxPrice: {{maxPrice}}}"> Fashion </a>
+<a [routerLink]="['/byFilters']" [queryParams]="{ type: 'TRAVEL', endDate: {{endDate}}, minPrice: {{minPrice}}, maxPrice: {{maxPrice}}}"> Travel </a>
+<a routerLink="activeCouponTable"> View All </a> -->
+
+<button (click) ="navigateFilters('ELECTRICITY')"> Electricity </button>
+<button (click) ="navigateFilters('FOOD')"> Food </button>
+<button (click) ="navigateFilters('HEALTH')"> Health </button>
+<button (click) ="navigateFilters('SPORTS')"> Sports </button>
+<button (click) ="navigateFilters('CHILDREN')"> Children </button>
+<button (click) ="navigateFilters('BABY')"> Baby </button>
+<button (click) ="navigateFilters('HOME')"> House & Home </button>
+<button (click) ="navigateFilters('FASHION')"> Fashion </button>
+<button (click) ="navigateFilters('TRAVEL')"> Travel </button>
+<a routerLink="home"> View All </a> 

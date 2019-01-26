@@ -1,0 +1,31 @@
+<h1>Company Profile</h1>
+
+        <div *ngIf="company">
+            <table class="table">
+              <tr>
+               <th>Name</th>
+              </tr>
+               <td>{{company.companyName}}</td>
+              <br>
+              <br>
+              <tr>
+                  <th>Email</th>
+               </tr>
+                <td>{{company.companyEmail}}</td>
+            </table>
+          </div>
+<br><br>
+         <div class="options"> 
+          <a routerLink="/userActiveCoupons">View All Company Active Coupons</a>
+
+          <!-- <button routerLink="/companyHistoryCoupons">companyHistoryCoupons</button> -->
+
+          <a  routerLink="/changePassword"> Change Your Password</a>
+
+          <a routerLink="/changeEmail"> Update Your Email Address </a>
+
+          <a routerLink="/addCoupon"> Add A New Coupon</a>
+
+        </div>
+
+         

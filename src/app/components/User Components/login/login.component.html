@@ -1,0 +1,30 @@
+<div class="menuItem">
+
+<form #formData="ngForm">
+
+    <p> User Type:  </p>
+    <input #userTypeData="ngModel" type="radio" name="userType" value="Customer"  [(ngModel)]="user.userType"> Customer 
+    <input  #userTypeData="ngModel" type="radio" name="userType" value="Company"  [(ngModel)]="user.userType"> Company 
+    <!-- <input #userTypeData="ngModel" required type="radio" name="userType" [(ngModel)]="user.userType" >  -->
+    <span *ngIf="userTypeData.invalid && userTypeData.touched">Please choose a type...</span> 
+    <br>
+
+    <p> UserName:  </p>
+    <input #usernameData="ngModel" required minlength="2" maxlength="50" type="text" placeholder="UserName" 
+        name="userName" [(ngModel)]="user.userName">
+    <span *ngIf="usernameData.errors?.required && usernameData.touched">Missing username...</span>
+    <span *ngIf="usernameData.errors?.minlength && usernameData.touched">Username too short...</span>
+    <br>
+
+    <p> Password: </p> 
+    <input #passwordData="ngModel"  type="password" placeholder="Password" name="password" minlength="8" maxlength="10"
+        [(ngModel)]="user.password">
+    <!-- <span *ngIf="passwordData.invalid && passwordData.touched">Incorrect password...</span> -->
+    <span *ngIf="passwordData.errors?.minlength || passwordData.errors?.maxlength && usernameData.touched"> Password Must Be Between 8-10 Characters</span>
+    <br>
+    
+    <button [disabled]="formData.form.invalid" (click)="login()">Log In</button>
+
+</form>
+
+</div>

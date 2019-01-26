@@ -1,0 +1,25 @@
+<h1>Customer Profile</h1>
+
+        <div *ngIf="customer">
+            <table class="table">
+              <tr>
+               <th>userName</th>
+              </tr>
+               <td>{{customer.customerName}}</td>
+              <br>
+              <br>
+              </table>
+          </div>
+
+         
+          <div class="options">
+          <button (click)="customerActiveCoupons()">View All Active Coupons</button>
+
+          <button (click)="customerAllPurchasedCoupons()">View All Coupons - Active & Non-Active</button>
+
+          <button (click)="changePassword()">Change Your Password</button>
+
+        </div>
+          <!-- <button routerLink="/updateEmail">updateEmail</button> -->
+
+          <!-- <button routerLink="/addCoupon">Add New Coupon</button> -->

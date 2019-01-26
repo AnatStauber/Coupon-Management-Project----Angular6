@@ -1,0 +1,13 @@
+<form #FormData="ngForm" class="prices">
+  minPrice: 
+  <input #minPriceData="ngModel" type="range" min="1" max="1000"  class="slider" name="minPrice" [(ngModel)]="minPrice">
+  <span *ngIf="minPriceData.touched"> {{minPrice}} </span>
+  <br><br>
+  maxPrice:
+  <input #maxPriceData="ngModel" type="range" min="1" max="1000" class="slider" name="maxPrice" [(ngModel)]="maxPrice">
+  <span *ngIf="maxPriceData.touched"> {{maxPrice}} </span>
+   <br><br>
+   <input #endDateData="ngModel" type="date" name="endDate" [(ngModel)]="endDate">
+   <span *ngIf="endDateData.touched"> {{endDate}} </span>
+  <button [disabled]="FormData.form.invalid" (click)="NavigatePrices()"> Apply </button>
+</form>

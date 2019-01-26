@@ -1,0 +1,15 @@
+
+<div id="purchaseBox" *ngIf="coupon">
+
+  <a class="goBack" routerLink = "/couponProfile/{{coupon.couponId}}"> Back to coupon> </a>   
+  <h1> purchase {{coupon.couponTitle}} </h1>
+  <br>
+  <div id="amountBox">
+  <h2> amount: {{amount}} </h2> 
+  <button class="amountButtons" (click) = "increase()"> + </button>
+  <button class="amountButtons" (click) = "decrease()"> - </button>
+  </div>
+  <br><br>
+  <button class="purchaseButton" (click) = "purchaseCoupon()" > purchase</button>
+
+</div>

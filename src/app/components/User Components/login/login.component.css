@@ -1,0 +1,40 @@
+
+
+span{
+    color: red;
+    font-family: 'abel';
+    font-weight: bold;
+    /* text-align: left; */
+    margin-left:20px;
+    margin-top: 40px;
+    position: fixed;
+    
+}
+
+form, input{
+    font-family: 'abel';
+    font-weight: bold;
+    font-size:20px;
+    position: static;
+}
+
+form{
+   position:fixed;
+   align-items: center;
+}
+
+p{
+    display:inline-block;
+    padding: 20px;
+}
+
+.menuItem{
+ 
+    width:300px;
+    height:300px;
+    display:block;
+    position: relative;
+    
+ 
+      
+}
