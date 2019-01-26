@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+.goBack{
+    font-size: 20px;
+     background-color: rgb(153,0,51);
+     color: white;
+     font-family: 'abel';
+     top: 10px;
+     right:3px;
+ }
+ 
+ @font-face {
+    font-family:shink;
+    src: url(C:\Angular\CouponsWebsite\src\assets\Shink.otf) format("opentype");
+  }
+  
+  @font-face {
+    font-family:Abel;
+    src: url(C:\Angular\CouponsWebsite\src\assets\abel.ttf) format("truetype");
+  }
+  
+  button{
+    cursor: pointer;
+  }
